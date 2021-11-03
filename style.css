@@ -3,9 +3,8 @@ ________________________
 initialize
 ________________________
 */
-*,
-::after,
-::before {
+
+*, ::after, ::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,8 +18,9 @@ ________________________
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
 html {
-    font-size: 100%; /* 16px default*/
-} 
+    font-size: 100%;
+    /* 16px default*/
+}
 
 /*
 ________________________
@@ -39,12 +39,10 @@ ________________________
     --primary-700: #993737;
     --primary-800: #662525;
     --primary-900: #331212;
-
     /* grey */
     --grey-100: #f8fafc;
     --grey-500: #64748b;
     --grey-900: #0f172a;
-
     /* fonts  */
     --headingFont: 'Roboto', sans-serif;
     --bodyFont: 'Montserrat', sans-serif;
@@ -74,8 +72,7 @@ p {
     padding-left: 10px;
 }
 
-h1,
-h2 {
+h1, h2 {
     margin: 0;
     margin-bottom: 1.38rem;
     padding-left: 2.5rem;
@@ -139,8 +136,6 @@ Navbar
 ________________________
 */
 
-
-
 /*
 ________________________
 Positions
@@ -160,11 +155,14 @@ ________________________
     width: 150px;
 }
 
-.item1{
+.item1 {
     background-color: rgb(255, 190, 225);
+    position: sticky;
+    top: 50px;
+    left: 50px;
 }
 
-.item2{
+.item2 {
     background-color: rgb(131, 204, 233)
 }
 
@@ -173,11 +171,13 @@ ________________________
 Units
 ________________________
 */
+
 .box__container {
     height: auto;
     margin: 10px;
     width: 70%;
 }
+
 .box {
     border: 1px solid var(--grey-900);
     height: auto;
@@ -191,12 +191,44 @@ ________________________
     font-size: 25px;
 }
 
+.font__1em {
+    font-size: 1em;
+}
+
+.font__1rem {
+    font-size: 1rem;
+}
+
+.font__100percent {
+    font-size: 100%;
+}
+
+.font__2em {
+    font-size: 2em;
+}
+
+.font__2rem {
+    font-size: 2rem;
+}
+
+.font__200percent {
+    font-size: 200%;
+}
+
+.box__percent {
+    width: 50%;
+}
+
+.box__pixels {
+    width: 200px;
+}
 
 /*
 ________________________
 Flex
 ________________________
 */
+
 .flex__container {
     display: flex;
     justify-content: center;
@@ -208,26 +240,51 @@ ________________________
 Media Queries
 ________________________
 */
-.media__container{
+
+.media__container {
     height: 20vh;
     width: 90vw;
     margin-bottom: 50px;
     background-color: var(--primary-100);
 }
+
 /* Extra small devices (phones, 600px and down) */
 
+@media screen and (max-width: 600px) {
+    .media__container {
+        background-color: var(--primary-100);
+    }
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-
+@media screen and (min-width: 600px) {
+    .media__container {
+        background-color: var(--primary-200);
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 
-
+@media screen and (min-width: 768px) {
+    .media__container {
+        background-color: var(--primary-400);
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 
-
+@media screen and (min-width: 992px) {
+    .media__container {
+        background-color: var(--primary-600);
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {
+    .media__container {
+        background-color: var(--primary-800);
+    }
+}
